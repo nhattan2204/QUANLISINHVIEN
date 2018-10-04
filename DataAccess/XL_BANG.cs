@@ -11,7 +11,7 @@ namespace DataAccess
 	public class XL_BANG: DataTable
 	{
 		#region Bien cuc bo
-		public static String Chuoi_lien_ket = "Data Source=DESKTOP-DN0E58S\nhatt;Initial Catalog=QLSINHVIEN4;Integrated Security=True";
+		public static String Chuoi_lien_ket = "Data Source=DESKTOP-DN0E58S;Initial Catalog=QLSINHVIEN4;Integrated Security=True";
 		private SqlDataAdapter mBo_doc_ghi = new SqlDataAdapter();
 		private SqlConnection mKet_noi;
 		private String mChuoi_SQL;
@@ -54,7 +54,7 @@ namespace DataAccess
 		public void Doc_bang()
 		{
 			if (mChuoi_SQL == null)
-				mChuoi_SQL = "SELECT * FROM" + mTen_bang;
+				mChuoi_SQL = "SELECT * FROM " + mTen_bang;
 			if (mKet_noi == null)
 				mKet_noi = new SqlConnection(Chuoi_lien_ket);
 			try
